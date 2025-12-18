@@ -1,4 +1,5 @@
 from ultralytics import YOLO
+import threading
 
 """
 file: detector.py
@@ -16,13 +17,15 @@ class YOLOService:
         with cls._lock:
             if cls._instance is None:
                 cls._instance = super().__new__(cls)
-                cls._instance.model = YOLO("yolov8n.pt")
-        return cls._instace
+                cls._instance.model = YOLO("models/yolov8n-pose.pt")
+        return cls._instance
     
     def _Process_Image(self, image_bytes):
         #converts image bytes to OpenCV/PIL object
+        return
 
     def _Detect_Image(self, processed_image):
         #detects faces from OpenCV/PIL object and returns an array of coordinates of the face centers
+        return
 
 
