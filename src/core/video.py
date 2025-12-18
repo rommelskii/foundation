@@ -6,10 +6,11 @@ This script contains the factory class for showing the final image output with t
 
 class VideoService:
     @staticmethod
-    def Draw_Faces(self, face_coords):
+    def Draw_Faces(face_coords):
         #insert logic for overlaying grades on the faces
-        #output the PIL image
+        #output the OpenCV/PIL image
 
     @staticmethod
-    def Output_Frame(self,
+    def Output_Frame(image)
+        #output processed image as bytes for submission
 
