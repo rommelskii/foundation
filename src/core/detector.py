@@ -19,13 +19,8 @@ class YOLOService:
                 cls._instance = super().__new__(cls)
                 cls._instance.model = YOLO("models/yolov8n-pose.pt")
         return cls._instance
-    
-    def _Process_Image(self, image_bytes):
-        #converts image bytes to OpenCV/PIL object
-        return
 
     def _Detect_Image(self, processed_image):
-        #detects faces from OpenCV/PIL object and returns an array of coordinates of the face centers
-        return
+        return self._instance.model.predict(processed_image)
 
 
